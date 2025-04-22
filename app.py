@@ -29,6 +29,10 @@ class GameState(BaseModel):
 class AIResponse(BaseModel):
     move: int
 
+@app.get("/api/test")
+async def health_check():
+    return {"status": "ok", "message": "Server is running"}
+
 @app.post("/api/connect4-move")
 async def make_move(game_state: GameState) -> AIResponse:
     try:
