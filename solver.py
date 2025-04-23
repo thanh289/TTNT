@@ -185,8 +185,8 @@ class Solver:
 
         is_certain_terminal_score = False
         if isinstance(score, (int, float)) and score != -math.inf:
-            # if score == max_possible_score or score == min_possible_score:
-            if score == max_possible_score:
+            if score == max_possible_score or score == min_possible_score:
+            # if score == max_possible_score:
                  is_certain_terminal_score = True
 
         if is_certain_terminal_score:
